@@ -118,6 +118,13 @@
     margin-top: 10px;
     font-size: 1.05rem;
     min-height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #typewriter {
+    display: inline-block;
   }
   
   .cursor {
@@ -890,23 +897,31 @@
   /* Contact Section */
 .contact-container {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    max-width: 900px;
-    margin: 0 auto;
-    margin-bottom: -50px;
+    gap: 4rem;
+    max-width: 1000px;
+    margin: 0 auto 4rem;
   }
   
   .contact-info {
     display: flex;
+    justify-content: center;
     align-items: center;
-    margin-left: 8rem;
-    
+    gap: 4rem;
+    flex-wrap: wrap;
   }
   
   .contact-item {
     display: flex;
-    align-items: flex-start;
-    margin-bottom: 2rem;
+    align-items: center;
+    gap: 1.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .contact-item:hover {
+    transform: translateX(5px);
   }
   
   .contact-icon {
@@ -917,20 +932,28 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 1.5rem;
     font-size: 1.3rem;
     color: #fff;
     box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+  }
+  
+  .contact-item:hover .contact-icon {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
   }
   
   .contact-text h3 {
     font-size: 1.2rem;
     color: #2d3748;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.05rem;
+    font-weight: 600;
   }
   
   .contact-text p {
-    color: #718096;
+    color: #4a5568;
+    font-size: 1rem;
   }
   
   .social-links-footer {
@@ -941,8 +964,8 @@
   }
   
   .social-link {
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     background-color: #fff;
     display: flex;
@@ -957,7 +980,7 @@
   .social-link:hover {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: #fff;
-    transform: translateY(-3px);
+    transform: translateY(-5px);
     box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
   }
   

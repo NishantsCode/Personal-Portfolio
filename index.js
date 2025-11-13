@@ -7,12 +7,13 @@ let typewriterElement = document.getElementById('typewriter');
 
 function typeWriter() {
   const currentText = texts[textIndex];
+  const cursor = '<span class="cursor">|</span>';
   
   if (isDeleting) {
-    typewriterElement.textContent = currentText.substring(0, charIndex - 1);
+    typewriterElement.innerHTML = currentText.substring(0, charIndex - 1) + cursor;
     charIndex--;
   } else {
-    typewriterElement.textContent = currentText.substring(0, charIndex + 1);
+    typewriterElement.innerHTML = currentText.substring(0, charIndex + 1) + cursor;
     charIndex++;
   }
   
