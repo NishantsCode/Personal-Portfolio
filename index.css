@@ -234,10 +234,6 @@
     padding: 8px;
   }
   
-  .logo-circle img {
-    filter: brightness(0) invert(1);
-  }
-  
   .exp-details {
     flex: 1;
   }
