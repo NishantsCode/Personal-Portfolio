@@ -1,5 +1,5 @@
 // Typewriter Effect
-const texts = ['Web Developer', 'Software Developer', 'Python Developer', 'Full Stack Developer'];
+const texts = ['Software Developer','Web Developer', 'Developer', 'Full Stack Developer'];
 let textIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -7,13 +7,12 @@ let typewriterElement = document.getElementById('typewriter');
 
 function typeWriter() {
   const currentText = texts[textIndex];
-  const cursor = '<span class="cursor">|</span>';
   
   if (isDeleting) {
-    typewriterElement.innerHTML = currentText.substring(0, charIndex - 1) + cursor;
+    typewriterElement.textContent = currentText.substring(0, charIndex - 1);
     charIndex--;
   } else {
-    typewriterElement.innerHTML = currentText.substring(0, charIndex + 1) + cursor;
+    typewriterElement.textContent = currentText.substring(0, charIndex + 1);
     charIndex++;
   }
   
